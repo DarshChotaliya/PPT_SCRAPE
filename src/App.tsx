@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Background3D from './components/Background3D';
 import Presentation from './components/Presentation';
 import Slide from './components/Slide';
@@ -690,7 +690,7 @@ function App() {
             ].map((step, i, arr) => {
               const StepIcon = step.icon;
               return (
-                <React.Fragment key={i}>
+                <Fragment key={i}>
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -709,7 +709,7 @@ function App() {
                   {i < arr.length - 1 && (
                     <div className="hidden md:block h-1 flex-1 bg-gradient-to-r from-[#00f2fe]/30 to-[#00fe9b]/30 mx-4 rounded-full" />
                   )}
-                </React.Fragment>
+                </Fragment>
               );
             })}
           </div>
