@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type FC, type ReactNode } from 'react';
 import Reveal from 'reveal.js';
 import 'reveal.js/reveal.css';
 import 'reveal.js/theme/black.css';
@@ -6,12 +6,12 @@ import { ChevronLeft, ChevronRight, Mic, MicOff } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface PresentationProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Presentation: React.FC<PresentationProps> = ({ children }) => {
+const Presentation: FC<PresentationProps> = ({ children }) => {
   const deckRef = useRef<HTMLDivElement>(null);
-  const [reveal, setReveal] = useState<Reveal.Api | null>(null);
+  const [reveal, setReveal] = useState<InstanceType<typeof Reveal> | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [totalSlides, setTotalSlides] = useState(0);
   const [isListening, setIsListening] = useState(false);

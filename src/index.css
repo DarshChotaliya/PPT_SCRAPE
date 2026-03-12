@@ -32,7 +32,7 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 50;
-  background: 
+  background:
     url('https://grainy-gradients.vercel.app/noise.svg'),
     linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%),
     linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
@@ -42,17 +42,49 @@ body {
 }
 
 @keyframes noise {
-  0% { transform: translate(0,0) }
-  10% { transform: translate(-1%,-1%) }
-  20% { transform: translate(1%,1%) }
-  30% { transform: translate(-2%,1%) }
-  40% { transform: translate(1%,-1%) }
-  50% { transform: translate(-1%,1%) }
-  60% { transform: translate(1%,2%) }
-  70% { transform: translate(-1%,-2%) }
-  80% { transform: translate(2%,1%) }
-  90% { transform: translate(1%,-1%) }
-  100% { transform: translate(0,0) }
+  0% {
+    transform: translate(0, 0)
+  }
+
+  10% {
+    transform: translate(-1%, -1%)
+  }
+
+  20% {
+    transform: translate(1%, 1%)
+  }
+
+  30% {
+    transform: translate(-2%, 1%)
+  }
+
+  40% {
+    transform: translate(1%, -1%)
+  }
+
+  50% {
+    transform: translate(-1%, 1%)
+  }
+
+  60% {
+    transform: translate(1%, 2%)
+  }
+
+  70% {
+    transform: translate(-1%, -2%)
+  }
+
+  80% {
+    transform: translate(2%, 1%)
+  }
+
+  90% {
+    transform: translate(1%, -1%)
+  }
+
+  100% {
+    transform: translate(0, 0)
+  }
 }
 
 .vignette {
@@ -60,7 +92,7 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 45;
-  background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.85) 150%);
+  background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.85) 150%);
 }
 
 .glow-blue {

@@ -1,13 +1,13 @@
-import React from 'react';
+import { type FC, type ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 interface SlideProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   background?: string;
 }
 
-const Slide: React.FC<SlideProps> = ({ children, className = '', background = '' }) => {
+const Slide: FC<SlideProps> = ({ children, className = '', background = '' }) => {
   return (
     <section
       data-background={background || 'radial-gradient(circle at center, rgba(0,242,254,0.08), transparent)'}
