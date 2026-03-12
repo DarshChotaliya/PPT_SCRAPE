@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #050505;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: white;
+}
+
+.reveal-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Cinematic Video Overlays */
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  background: 
+    url('https://grainy-gradients.vercel.app/noise.svg'),
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 200px, 100% 3px, 2px 100%;
+  opacity: 0.12;
+  animation: noise 0.2s infinite steps(2);
+}
+
+@keyframes noise {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-1%,-1%) }
+  20% { transform: translate(1%,1%) }
+  30% { transform: translate(-2%,1%) }
+  40% { transform: translate(1%,-1%) }
+  50% { transform: translate(-1%,1%) }
+  60% { transform: translate(1%,2%) }
+  70% { transform: translate(-1%,-2%) }
+  80% { transform: translate(2%,1%) }
+  90% { transform: translate(1%,-1%) }
+  100% { transform: translate(0,0) }
+}
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 45;
+  background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.85) 150%);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(0, 254, 155, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00f2fe 0%, #00fe9b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
